@@ -1,4 +1,4 @@
-function [Output]= WLDB (GrayImage,RegionsMat,ComparisonVector)
+function [Output]= ELDB (GrayImage,RegionsMat,ComparisonVector)
 OutSize=size(RegionsMat,1);
 AbsDiffx=abs([GrayImage(:,2:size(GrayImage,2))-GrayImage(:,1:(size(GrayImage,2)-1)),zeros(size(GrayImage,1),1)]);
 AbsDiffy=abs([GrayImage(1:(size(GrayImage,1)-1),:)-GrayImage(2:size(GrayImage,1),:);zeros(1,size(GrayImage,2))]);
