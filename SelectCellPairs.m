@@ -1,0 +1,3 @@
+function [RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LDBLevels,LDBMode)
+[RegionsMat,ComparisonVectorOriginal]= LDBLookUpTable (ImageSize,LDBLevels,LDBMode);  %RegionsMat: holds all grid-cells locations, ComparisonVectorOriginal: holds all possible cell-pairs compinations
+[ComparisonVector]= RandomRowSelection(ComparisonVectorOriginal,SelectedComparisonsNum); %Select number of cell pairs combinations.
