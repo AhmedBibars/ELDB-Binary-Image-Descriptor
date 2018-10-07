@@ -4,13 +4,14 @@ ELDB represents an extenstion to the Local Diffrence Binary (LDB) binary image d
 
 To compute the ELDB discriptor of an image. First, the locations of the randomly selected image-cells pairs should be determined using LDBLookUpTable function. Then, the discriptor is computed using ELDB1 function. As the following:
 
+```
 Mode=1;         % 1: Linear growing grid, 2: Exponential growing grid.
 ImageSize=64;   % Reduced image side-size
 LevelsNum=15;   % Maximium grid side-size   (here maximium grid is of size 15X15 cells)
 [RegionsMat,ComparisonVector]= LDBLookUpTable (ImageSize,LevelsNum,Mode);
 ReducedSizeImage=imresize(rgeb2gary(image),[ImageSize,ImageSize]);
 ELDB_Descriptor=ELDB1(ReducedSizeImage,RegionsMat,ComparisonVector);
-
+```
 
 The Demos presented in this project measure the accuricy of ELDB when used for place recgnition by single-image matching. The datasets used are:
 1- Alderlay day/night dataset.
