@@ -12,6 +12,12 @@ LevelsNum=15;   % Maximium grid side-size   (here maximium grid is of size 15X15
 ReducedSizeImage=imresize(rgeb2gary(image),[ImageSize,ImageSize]);
 ELDB_Descriptor=ELDB1(ReducedSizeImage,RegionsMat,ComparisonVector);
 ```
+To match an ELDB image descriptor with database martix, each or its rows represents an ELDB discriptor of certain image, you can use LDBMatch function. This function generats a diffrence vector, each of each elements is the Hamming distance between the input image and certain database image-descriptor. As the following:
+
+```
+DistanceVector=LDBMatch(QuaryImageDescriptor,DatabaseDescriptorsMatrix);
+```
+
 
 The Demos presented in this project measure the accuricy of ELDB when used for place recgnition by single-image matching. The datasets used are:
 1- Alderlay day/night dataset.
