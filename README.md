@@ -34,10 +34,10 @@ The following code show an example for using MatchImageSequances:
 %%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DatabaseVideoPath='G:\Nordland old\day1_orig.avi';
 QuaryVideoPath='G:\Nordland old\night1_orig.avi';
-ImageSize=64;  %redused image size
+ImageSize=64;  %reduced image size
 CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2 
 SelectedComparisonsNum=4000;       % number of randomly selected cell-pairs
-ImagePreProcessing=@rgb2gray;  %@rgb2gray, or@SkyBlackining to select Sky-Blacking option. 
+ImagePreProcessing=@rgb2gray;  %@rgb2gray, or @SkyBlackining to select Sky-Blacking option. 
 LDBLevels=5;                   %number of grid levels.
 LDBMode=2;                           % 1:linear   2:Exponential 
 P_MLDB=@ELDB1;                 % pointer to ELDB1 function;
