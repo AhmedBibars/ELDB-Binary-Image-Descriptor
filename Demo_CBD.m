@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DatabaseVideoPath='G:\SURF Features\Day.wmv';FrameCropStart=172;%172%175
 QuaryVideoPath='G:\SURF Features\Night.wmv';
-ImageSize=64;    %redused image size
+ImageSize=64;    %reduced image size
 FrameCropStart=7;FrameCropEnd=172; %interest area in the frame (vertical limits).
 CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2. 
 SelectedComparisonsNum=1000;       % number of randomly selected cell-pairs per sub-image (each frame is divided to 4 sub-images).
