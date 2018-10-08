@@ -51,14 +51,12 @@ MatchPanoramicImageSequances;   %Match the two panoramic image sequences
 ```
 
 
-The Demos presented in this project measure the accuricy of ELDB when used for place recgnition by single-image matching. The datasets used are:
+The Demos presented in this project measure the accuracy of ELDB when used for place recognition by single-image matching. The datasets used are: 
 1- Alderlay day/night dataset.
 2- Surfares Paradise dataset.
 3- Highway dataset.
 4- CBD dataset.
-Each of this datasets contains two videos, one is recoreded at day time, while the other is recoreded at nights. One of the two videos is considered as an image database, while the other is considered as a real-time image-queries.
+Each of this datasets contains two videos, one is recorded at day time, while the other is recorded at nights. One of the two videos is considered as an image database, while the other is considered as a real-time image-queries.
 
-The videos of the datasets are avilable at the following website of queensland university of technology (QUT):
+The videos of the datasets are available at the following website of Queensland university of technology (QUT):
 https://wiki.qut.edu.au/display/cyphy/Datasets
-
-
