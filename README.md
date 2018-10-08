@@ -24,7 +24,7 @@ The two files MatchImageSequances and MatchPanoramicImageSequances are used to m
 - ImageSize=64:   side-size of the downsized image that will be used to generate the discriptor.
 - SelectedComparisonsNum: number of randomly selected cell-pairs for each image (or for each sub-image in case of panoramic videos).
 - CoparisonsPerPair=3  : number of generated bits from each cell-pair comparison; =3 in case of ELDB1 and LDB, and =5 incase of ELDB2.    - LDBLevels: number of grid levels (number of the levels in the image-pyramid).
-- LDBMode:      =1 to select linear growing grid   =2 to select exponential growing grid.
+- LDBMode:  =1 to select linear growing grid   =2 to select exponential growing grid.
 - P_MLDB: pointer to desriptor function. =@ELDB1 to select ELDB descriptir, or =@LDB to select LDB descriptor.
 
 The following code show an example for using MatchImageSequances:
