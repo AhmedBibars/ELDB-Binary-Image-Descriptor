@@ -5,7 +5,7 @@ ImageSize=64;  %reduced image size
 CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2 
 SelectedComparisonsNum=4000;       % number of randomly selected cell-pairs
 load GroundTruth_Alderlay;  % groundtruth quary/database equivelant frames, to compare our results with it.
-ImagePreProcessing=@rgb2gray;
+ImagePreProcessing=@rgb2gray; %@rgb2gray, or @SkyBlackining to select Sky-Blacking option.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
