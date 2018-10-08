@@ -31,23 +31,21 @@ The two files MatchImageSequances and MatchPanoramicImageSequances are used to m
 The following code show an example for using MatchImageSequances:
 
 ```
-%%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-DatabaseVideoPath='G:\Binary Surf Highway\Night.wmv';
-QuaryVideoPath='G:\Binary Surf Highway\Day.wmv';
-ImageSize=64;   %redused image size
-FrameCropStart=33;FrameCropEnd=172; %interest area in the frame (vertical limits).
-CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2. 
-SelectedComparisonsNum=1000;       % number of randomly selected cell-pairs per sub-image (each frame is divided to 4 sub-images).
-load GroundTruth_Highway;  % groundtruth quary/database equivelant frames, to compare our results with it.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%1- ELDB Exponential
-LDBLevels=4;
+%%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DatabaseVideoPath='G:\Nordland old\day1_orig.avi';
+QuaryVideoPath='G:\Nordland old\night1_orig.avi';
+ImageSize=64;  %redused image size
+CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2 
+SelectedComparisonsNum=4000;       % number of randomly selected cell-pairs
+load GroundTruth_Alderlay;  % groundtruth quary/database equivelant frames, to compare our results with it.
+ImagePreProcessing=@rgb2gray;  %@rgb2gray, or@SkyBlackining to select Sky-Blacking option. 
+LDBLevels=5;                   %number of grid levels.
 LDBMode=2;                           % 1:linear   2:Exponential 
-P_MLDB=@ELDB1; % pointer to ELDB1 function;
+P_MLDB=@ELDB1;                 % pointer to ELDB1 function;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LDBLevels,LDBMode); %randomly select cell-pairs
-MatchPanoramicImageSequances;   %Match the two panoramic image sequences
+MatchImageSequances;   %Match the two image sequences
 ```
 
 
