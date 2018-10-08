@@ -18,6 +18,37 @@ To match an ELDB image descriptor with database martix, each or its rows represe
 DistanceVector=LDBMatch(QuaryImageDescriptor,DatabaseDescriptorsMatrix);
 ```
 
+The two files MatchImageSequances and MatchPanoramicImageSequances are used to match images in two regular videos or two panormanic vedios, respectivly. Before calling any of the two files, the following parameters has to be defied:
+- DatabaseVideoPath: path of the database video.
+- QuaryVideoPath: path of the quaries images video.
+- ImageSize=64:   side-size of the downsized image that will be used to generate the discriptor.
+- SelectedComparisonsNum: number of randomly selected cell-pairs for each image (or for each sub-image in case of panoramic videos).
+- CoparisonsPerPair=3  : number of generated bits from each cell-pair comparison; =3 in case of ELDB1 and LDB, and =5 incase of ELDB2.    - LDBLevels: number of grid levels (number of the levels in the image-pyramid).
+- LDBMode:      =1 to select linear growing grid   =2 to select exponential growing grid.
+- P_MLDB: pointer to desriptor function. =@ELDB1 to select ELDB descriptir, or =@LDB to select LDB descriptor.
+
+The following code show an example for using MatchImageSequances:
+
+```
+%%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DatabaseVideoPath='G:\Binary Surf Highway\Night.wmv';
+QuaryVideoPath='G:\Binary Surf Highway\Day.wmv';
+ImageSize=64;   %redused image size
+FrameCropStart=33;FrameCropEnd=172; %interest area in the frame (vertical limits).
+CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2. 
+SelectedComparisonsNum=1000;       % number of randomly selected cell-pairs per sub-image (each frame is divided to 4 sub-images).
+load GroundTruth_Highway;  % groundtruth quary/database equivelant frames, to compare our results with it.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1- ELDB Exponential
+LDBLevels=4;
+LDBMode=2;                           % 1:linear   2:Exponential 
+P_MLDB=@ELDB1; % pointer to ELDB1 function;
+[RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LDBLevels,LDBMode); %randomly select cell-pairs
+MatchPanoramicImageSequances;   %Match the two panoramic image sequences
+```
+
 
 The Demos presented in this project measure the accuricy of ELDB when used for place recgnition by single-image matching. The datasets used are:
 1- Alderlay day/night dataset.
