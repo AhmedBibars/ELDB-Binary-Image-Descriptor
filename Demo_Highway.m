@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DatabaseVideoPath='G:\Binary Surf Highway\Night.wmv';
-QuaryVideoPath='G:\Binary Surf Highway\Day.wmv';
+QueryVideoPath='G:\Binary Surf Highway\Day.wmv';
 ImageSize=64;   %reduced image size
 FrameCropStart=33;FrameCropEnd=172; %interest area in the frame (vertical limits).
 ComparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2. 
