@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DatabaseVideoPath='G:\SURF Features\Day.wmv';FrameCropStart=172;%172%175
-QuaryVideoPath='G:\SURF Features\Night.wmv';
+QueryVideoPath='G:\SURF Features\Night.wmv';
 ImageSize=64;    %reduced image size
 FrameCropStart=7;FrameCropEnd=172; %interest area in the frame (vertical limits).
 ComparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2. 
