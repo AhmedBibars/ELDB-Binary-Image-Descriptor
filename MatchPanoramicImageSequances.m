@@ -37,7 +37,7 @@ DBDescriptorsMat=[LDBFrontMat,LDBRearMat,LDBSide1Mat,LDBSide2Mat];
 clear LDBFrontMat LDBRearMat LDBSide1Mat LDBSide2Mat
 
 %%%%%%%%%%%%%%%%%%%Compute Quaries frames descriptors%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-VidReadObj = VideoReader(QuaryVideoPath);
+VidReadObj = VideoReader(QueryVideoPath);
 QuaryFramesNumber = VidReadObj.NumberOfFrames;
 RtLDBFrontMat=zeros(QuaryFramesNumber,SizeLDBVect);
 RtLDBRearMat=zeros(QuaryFramesNumber,SizeLDBVect);
