@@ -18,7 +18,7 @@ To match an ELDB image descriptor with database matrix, each or its rows represe
 DistanceVector=LDBMatch(QuaryImageDescriptor,DatabaseDescriptorsMatrix);
 ```
 
-The two files MatchImageSequances and MatchPanoramicImageSequances are used to match images in two regular videos or two panormanic vedios, respectivly. Before calling any of the two files, the following parameters has to be defied:
+The two files MatchImageSequances and MatchPanoramicImageSequances are used to match images in two regular videos or two panoramic videos, respectively. Before calling any of the two files, the following parameters has to be defied:
 - DatabaseVideoPath: path of the database video.
 - QuaryVideoPath: path of the queries images video.
 - ImageSize=64:   side-size of the downsized image that will be used to generate the descriptor.
