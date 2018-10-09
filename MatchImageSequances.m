@@ -26,7 +26,7 @@ disp(strcat('Frame rate =',{' '},num2str(DBFramesNumber/ProcessingTime), ' Frame
 disp('----------------------------------------------------------------------------');
 
 %%%%%%%%%%%%%%%%%%%Compute Quaries frames descriptors%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-VidReadObj = VideoReader(QuaryVideoPath);
+VidReadObj = VideoReader(QueryVideoPath);
 QuaryFramesNumber = VidReadObj.NumberOfFrames;
 QuaryDescriptorsMat=zeros(QuaryFramesNumber,SizeLDBVect);
 tic
