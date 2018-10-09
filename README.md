@@ -8,7 +8,8 @@ To compute the ELDB descriptor of an image. First, the locations of the randomly
 Mode=1;         % 1: Linear growing grid, 2: Exponential growing grid.
 ImageSize=64;   % Reduced image side-size
 LevelsNum=15;   % Maximium grid side-size   (here maximium grid is of size 15X15 cells)
-[RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LDBLevels,LDBMode);         %randomly select cell-pairs
+SelectedComparisonsNum=4000;  % Number of randomly selected cell-pairs.
+[RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LevelsNum,Mode);         %randomly select cell-pairs
 ReducedSizeImage=imresize(rgeb2gary(image),[ImageSize,ImageSize]);
 ELDB_Descriptor=ELDB1(ReducedSizeImage,RegionsMat,ComparisonVector);
 ```
