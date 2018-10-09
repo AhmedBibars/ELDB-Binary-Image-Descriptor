@@ -21,7 +21,7 @@ DistanceVector=LDBMatch(QuaryImageDescriptor,DatabaseDescriptorsMatrix);
 
 The two files MatchImageSequances and MatchPanoramicImageSequances are used to match images in two regular videos or two panoramic videos, respectively. Before calling any of the two files, the following parameters has to be defined:
 - DatabaseVideoPath: path of the database video.
-- QuaryVideoPath: path of the queries images video.
+- QuaryVideoPath: path of the query-images video.
 - ImageSize:   side-size of the downsized image that will be used to generate the descriptor.
 - SelectedComparisonsNum: number of randomly selected cell-pairs for each image (or for each sub-image in case of panoramic videos).
 - CoparisonsPerPair: number of generated bits from each cell-pair comparison; =3 in case of ELDB1 and LDB, and =5 in case of ELDB2. 
@@ -34,7 +34,7 @@ The following code show an example for using MatchImageSequances:
 ```
 %%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DatabaseVideoPath='G:\Nordland old\day1_orig.avi';    % Change to the path of database video.
-QuaryVideoPath='G:\Nordland old\night1_orig.avi';     % Change to the path of quary images video.
+QuaryVideoPath='G:\Nordland old\night1_orig.avi';     % Change to the path of query-images video.
 ImageSize=64;  %reduced image size
 CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2 
 SelectedComparisonsNum=4000;       % number of randomly selected cell-pairs
