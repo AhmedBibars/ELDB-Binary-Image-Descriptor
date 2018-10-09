@@ -34,7 +34,7 @@ The following code show an example for using MatchImageSequances:
 ```
 %%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DatabaseVideoPath='G:\Nordland old\day1_orig.avi';    % Change to the path of database video.
-QuaryVideoPath='G:\Nordland old\night1_orig.avi';     % Change to the path of query-images video.
+QueryVideoPath='G:\Nordland old\night1_orig.avi';     % Change to the path of query-images video.
 ImageSize=64;  %reduced image size
 CoparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2 
 SelectedComparisonsNum=4000;       % number of randomly selected cell-pairs
