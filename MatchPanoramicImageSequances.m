@@ -1,9 +1,9 @@
-DiscriptorLength=SelectedComparisonsNum*CoparisonsPerPair;
+DiscriptorLength=SelectedComparisonsNum*ComparisonsPerPair;
 
 %%%%%%%%%%%%%%%%%%Compute Database descriptors%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 VidReadObj = VideoReader(DatabaseVideoPath);
 DBFramesNumber = VidReadObj.NumberOfFrames;
-SizeLDBVect=CoparisonsPerPair*size(ComparisonVector,1);      %=CoparisonsPerPair =5 in case of ELDB2 & =3 in case of ELDB1 and LDB
+SizeLDBVect=ComparisonsPerPair*size(ComparisonVector,1);      %=ComparisonsPerPair =5 in case of ELDB2 & =3 in case of ELDB1 and LDB
 LDBFrontMat=zeros(DBFramesNumber,SizeLDBVect);
 LDBRearMat=zeros(DBFramesNumber,SizeLDBVect);
 LDBSide1Mat=zeros(DBFramesNumber,SizeLDBVect);
