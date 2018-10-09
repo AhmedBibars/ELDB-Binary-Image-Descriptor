@@ -16,7 +16,7 @@ ELDB_Descriptor=ELDB1(ReducedSizeImage,RegionsMat,ComparisonVector);
 To match an ELDB image descriptor with database matrix, each or its rows represents an ELDB descriptor of certain image, you can use LDBMatch function. This function generates a difference vector, each of each elements represents the Hamming distance between the input image and certain database image-descriptor. As the following:
 
 ```
-DistanceVector=LDBMatch(QuaryImageDescriptor,DatabaseDescriptorsMatrix);
+DistanceVector=LDBMatch(QueryImageDescriptor,DatabaseDescriptorsMatrix);
 ```
 
 The two files MatchImageSequances and MatchPanoramicImageSequances are used to match images in two regular videos or two panoramic videos, respectively. Before calling any of the two files, the following parameters has to be defined:
