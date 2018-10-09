@@ -44,7 +44,7 @@ LDBMode=2;                           % 1:linear   2:Exponential
 P_MLDB=@ELDB1;                 % pointer to ELDB1 function;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-load GroundTruth_Alderlay;  % groundtruth quary/database equivelant frames, to compare our results with it.
+load GroundTruth_Alderlay;  % groundtruth quary/database equivelant frames, to compare matching results with it.
 [RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LDBLevels,LDBMode); %randomly select cell-pairs
 MatchImageSequances;   %Match the two image sequences
 ```
