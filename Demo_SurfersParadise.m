@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%Parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DatabaseVideoPath='G:\surfars paradise\Day_Modified.avi';
-QuaryVideoPath='G:\surfars paradise\Night_Modified.avi';
+QueryVideoPath='G:\surfars paradise\Night_Modified.avi';
 ImageSize=64;    %reduced image size
 ComparisonsPerPair=3;       % 3 bits generated for each cell-pair comparison, 5 incase of ELDB2 
 SelectedComparisonsNum=4000;       % number of randomly selected cell-pairs
