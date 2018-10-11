@@ -26,7 +26,7 @@ The two files MatchImageSequances and MatchPanoramicImageSequances are used to m
 - SelectedComparisonsNum: number of randomly selected cell-pairs for each image (or for each sub-image in case of panoramic videos).
 - CoparisonsPerPair: number of generated bits from each cell-pair comparison; =3 in case of ELDB1 and LDB, and =5 in case of ELDB2. 
 - LDBLevels: number of grid levels (number of the levels in the image-pyramid).
-- LDBMode:  =1 to select linear growing grid, =2 to select exponential growing grid.
+- LDBMode:  =1 to select linear growing grid, or =2 to select exponential growing grid.
 - P_MLDB: pointer to descriptor function. =@ELDB1 to select ELDB descriptor, or =@LDB to select LDB descriptor.
 
 The following code show an example for using MatchImageSequances:
