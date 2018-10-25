@@ -16,13 +16,13 @@ ELDB_Descriptor=ELDB1(NormalizedImage,RegionsMat,ComparisonVector);
 ```
 Note that, patch illumination normalization has to be performed for the image before computing its ELDB descriptors. 
 
-Another alternative method to compute the ELDB descriptor for an image is to use the class "ELDB_Descriptor". This class contains some default values for the different parameters, that can be changed if needed. The following code illustrates how to use this class to compute ELDB descriptor of an image:
+Another alternative method to compute the ELDB descriptor for an image is to use the class "ELDB_Descriptor". This class contains some default values for the different parameters, that can be changed if needed. The following code illustrates how to use this class to compute both ELDB and LDB descriptors of an image:
 
 ```
 Descriptor1=ELDB_Descriptor; % creat object of the class
 Descriptor1=Descriptor1.SelectRandomCellPairs;  %randomly select cell-pairs
 Desc_ELDB=Descriptor1.ELDB(Image);     % compute ELDB discriptor of "Image". "Image" should be 3 channel colored image"
-Desc_LDB=Descriptor1.LDB(Image);       % compute ELDB discriptor of "Image".
+Desc_LDB=Descriptor1.LDB(Image);       % compute LDB discriptor of "Image".
 ```
 
 To match an ELDB image descriptor with database matrix, each or its rows represents an ELDB descriptor of certain image, you can use LDBMatch function. This function generates a difference vector, each of each elements represents the Hamming distance between the input image and certain database image-descriptor. As the following:
