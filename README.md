@@ -68,7 +68,7 @@ The demos presented in this project measure the accuracy of the ELDB descriptor 
 2- Surfares Paradise dataset.
 3- Highway dataset.
 4- CBD dataset.
-Each of this datasets contains two videos, one is recorded at day time, while the other is recorded at nights. One of the two videos is considered as an image database, while the other is considered as a real-time image-queries.
+Each of these datasets contains two videos, one is recorded at day time, while the other is recorded at nights. One of the two videos is considered as an image database, while the other is considered as a real-time image-queries.
 
 The videos of the datasets are available at the following website of Queensland university of technology (QUT):
 https://wiki.qut.edu.au/display/cyphy/Datasets
