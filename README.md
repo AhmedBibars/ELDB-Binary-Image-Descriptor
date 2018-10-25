@@ -11,7 +11,7 @@ LevelsNum=15;   % Maximium grid side-size   (here maximium grid is of size 16X16
 SelectedComparisonsNum=4000;  % Number of randomly selected cell-pairs.
 [RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LevelsNum,Mode);         %randomly select cell-pairs
 ReducedSizeImage=imresize(rgb2gary(image),[ImageSize,ImageSize]);
-NormalizedImage=LocalNormalize(ReducedSizeImage,8);
+NormalizedImage=LocalNormalize(ReducedSizeImage,8);  % Patch illumination normalization.
 ELDB_Descriptor=ELDB1(NormalizedImage,RegionsMat,ComparisonVector);
 ```
 Note that, patch illumination normalization has to be performed for the image before computing its ELDB discriptors. otherwise, both ELDB and LDB will generate the same descriptor.
