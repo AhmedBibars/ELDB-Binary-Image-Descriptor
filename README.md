@@ -16,7 +16,7 @@ ELDB_Descriptor=ELDB1(NormalizedImage,RegionsMat,ComparisonVector);
 ```
 Note that, patch illumination normalization has to be performed for the image before computing its ELDB descriptors. 
 
-Another alternative method to compute the ELDB descriptor for an image is to use the class "ELDB_Descriptor". This class contains some default values for the different parameters, that can be changed if needed. The following code illustrates how to use this class to compute both ELDB and LDB descriptors of an image:
+Another alternative method to compute the ELDB descriptor of an image is to use the class "ELDB_Descriptor". This class contains some default values for the different parameters, that can be changed if needed. The following code illustrates how to use this class to compute both ELDB and LDB descriptors of an image:
 
 ```
 Descriptor1=ELDB_Descriptor; % creat object of the class
