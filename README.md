@@ -62,7 +62,7 @@ MatchImageSequances;   %Match the two image sequences
 ```
 
 
-The Demos presented in this project measure the accuracy of the ELDB descriptor when used for place recognition by single-image matching. The datasets used are: 
+The demos presented in this project measure the accuracy of the ELDB descriptor when used for place recognition by single-image matching. The datasets used are: 
 1- Alderlay day/night dataset.
 2- Surfares Paradise dataset.
 3- Highway dataset.
