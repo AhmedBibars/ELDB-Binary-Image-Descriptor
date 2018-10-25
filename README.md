@@ -25,6 +25,7 @@ Descriptor_ELDB=Descriptor1.ELDB(Image);     % compute ELDB descriptor of "Image
 Descriptor_LDB=Descriptor1.LDB(Image);       % compute LDB descriptor of "Image".
 ```
 
+
 To match an ELDB image descriptor with database matrix, each or its rows represents an ELDB descriptor of certain image, you can use LDBMatch function. This function generates a difference vector, each of each elements represents the Hamming distance between the input image and certain database image-descriptor. As the following:
 
 ```
