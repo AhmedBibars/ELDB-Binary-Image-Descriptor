@@ -10,7 +10,7 @@ ImageSize=64;   % Reduced image side-size
 LevelsNum=15;   % Maximium grid side-size   (here maximium grid is of size 16X16 cells)
 SelectedComparisonsNum=4000;  % Number of randomly selected cell-pairs.
 [RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LevelsNum,Mode);         %randomly select cell-pairs
-ReducedSizeImage=imresize(rgb2gary(Image),[ImageSize,ImageSize]);
+ReducedSizeImage=imresize(rgb2gray(Image),[ImageSize,ImageSize]);
 NormalizedImage=LocalNormalize(ReducedSizeImage,8);  % Patch illumination normalization.
 Descriptor=ELDB1(NormalizedImage,RegionsMat,ComparisonVector);
 ```
