@@ -21,7 +21,7 @@ Another alternative method to compute the ELDB descriptor of an image is to use 
 ```
 Descriptor1=ELDB_Descriptor; % create object of the class
 Descriptor1=Descriptor1.SelectRandomCellPairs;  %randomly select cell-pairs
-Descriptor_ELDB=Descriptor1.ELDB(Image);     % compute ELDB descriptor of "Image". "Image" should be 3 channels colored image"
+Descriptor_ELDB=Descriptor1.ELDB(Image);     % compute ELDB descriptor of "Image". "Image" should be 3 channels colored image.
 Descriptor_LDB=Descriptor1.LDB(Image);       % compute LDB descriptor of "Image".
 ```
 
