@@ -14,7 +14,7 @@ ReducedSizeImage=imresize(rgb2gary(image),[ImageSize,ImageSize]);
 NormalizedImage=LocalNormalize(ReducedSizeImage,8);  % Patch illumination normalization.
 ELDB_Descriptor=ELDB1(NormalizedImage,RegionsMat,ComparisonVector);
 ```
-Note that, patch illumination normalization has to be performed for the image before computing its ELDB descriptors. otherwise, both ELDB and LDB will generate the same descriptor.
+Note that, patch illumination normalization has to be performed for the image before computing its ELDB descriptors. otherwise, both ELDB and LDB will generate the same descriptor for the unnormalized image.
 
 Another alternative method to compute the ELDB descriptor for an image is to use the class "ELDB_Descriptor". This class contains some default values for the different parameters, that can be changed if needed. The following code illustrates how to use this class to compute ELDB descriptor of an image:
 
