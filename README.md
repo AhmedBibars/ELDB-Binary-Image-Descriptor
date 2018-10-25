@@ -1,4 +1,4 @@
-# ELDB-Binary-image-discriptor
+# ELDB-Binary-image-descriptor
 This project introduces ELDB binary image descriptor. This descriptor is used as a global image descriptor for place recognition applications. It represents an extension to the Local Difference Binary (LDB) image descriptor, that enhances its: ) image matching accuracy, 2) robustness against appearance changes, and 3) its computational efficiency.
 
 To compute the ELDB descriptor of an image. First, the locations of the randomly selected image-cells pairs should be determined using SelectCellPairs function. Then, the descriptor is computed using ELDB1 function. As the following:
@@ -10,9 +10,21 @@ ImageSize=64;   % Reduced image side-size
 LevelsNum=15;   % Maximium grid side-size   (here maximium grid is of size 16X16 cells)
 SelectedComparisonsNum=4000;  % Number of randomly selected cell-pairs.
 [RegionsMat,ComparisonVector]=SelectCellPairs(SelectedComparisonsNum,ImageSize,LevelsNum,Mode);         %randomly select cell-pairs
-ReducedSizeImage=imresize(rgeb2gary(image),[ImageSize,ImageSize]);
-ELDB_Descriptor=ELDB1(ReducedSizeImage,RegionsMat,ComparisonVector);
+ReducedSizeImage=imresize(rgb2gary(image),[ImageSize,ImageSize]);
+NormalizedImage=LocalNormalize(ReducedSizeImage,8);
+ELDB_Descriptor=ELDB1(NormalizedImage,RegionsMat,ComparisonVector);
 ```
+Note that, patch illumination normalization has to be performed for the image before computing its ELDB discriptors. otherwise, both ELDB and LDB will generate the same descriptor.
+
+Another alternative method to compute the ELDB descriptor for an image is to use the class "ELDB_Descriptor". This class contains some default values for the different parameters, that can be changed if needed. The following code illstrate how to use this class to compute ELDB descriptor of an image:
+
+```
+Descriptor1=ELDB_Descriptor; % creat object of the class
+Descriptor1=Descriptor1.SelectRandomCellPairs;  %randomly select cell-pairs
+Desc_ELDB=Descriptor1.ELDB(Image);     % compute ELDB discriptor of "Image". "Image" should be 3 channel colored image"
+Desc_LDB=Descriptor1.LDB(Image);       % compute ELDB discriptor of "Image".
+```
+
 To match an ELDB image descriptor with database matrix, each or its rows represents an ELDB descriptor of certain image, you can use LDBMatch function. This function generates a difference vector, each of each elements represents the Hamming distance between the input image and certain database image-descriptor. As the following:
 
 ```
