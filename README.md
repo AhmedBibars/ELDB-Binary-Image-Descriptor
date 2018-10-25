@@ -37,7 +37,7 @@ The two files MatchImageSequances.m and MatchPanoramicImageSequances.m are used 
 - QuaryVideoPath: path of the query-images video.
 - ImageSize:   side-size of the downsized image that will be used to generate the descriptor.
 - SelectedComparisonsNum: number of randomly selected cell-pairs for each image (or for each sub-image in case of panoramic videos).
-- CoparisonsPerPair: number of generated bits from each cell-pair comparison; =3 in case of ELDB1 and LDB, and =5 in case of ELDB2. 
+- ComparisonsPerPair: number of generated bits from each cell-pair comparison; =3 in case of ELDB1 and LDB, and =5 in case of ELDB2. 
 - LDBLevels: number of grid levels (number of the levels in the image-pyramid).
 - LDBMode:  =1 to select linear growing grid, or =2 to select exponential growing grid.
 - P_MLDB: pointer to descriptor function. =@ELDB1 to select ELDB descriptor, or =@LDB to select LDB descriptor.
