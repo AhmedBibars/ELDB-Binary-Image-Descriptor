@@ -11,7 +11,7 @@ classdef ELDB_Descriptor
    methods
       function obj=SelectRandomCellPairs (obj)  %Mode=1(linear),=2(Exp)
 
-         if obj.DescriptorMode==1
+         if obj.DescriptorMode==1              % if linear grawing-grids is selected
             OutputSize= (obj.LDBLevelsNum+1)*(obj.LDBLevelsNum+2)*(2*(obj.LDBLevelsNum+1)+1)/6 -1;
             obj.RegionsMat=zeros(OutputSize,4);
             i=1;
@@ -41,7 +41,7 @@ classdef ELDB_Descriptor
                 end
             end
             obj.RegionsMat=round(obj.RegionsMat);
-         else
+         else                                            % if Exponential grawing-grids is selected
             OutputSize=(1-4^(obj.LDBLevelsNum+1))/(-3)-1; %(obj.LDBLevelsNum+1)*(obj.LDBLevelsNum+2)*(2*(obj.LDBLevelsNum+1)+1)/6 -1;
             obj.RegionsMat=zeros(OutputSize,4);
             i=1;
