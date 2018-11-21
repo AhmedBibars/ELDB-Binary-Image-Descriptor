@@ -1,12 +1,12 @@
 classdef ELDB_Descriptor
    properties
-      DescriptorLength=12000;
-      DescriptorMode=1;
-      LDBLevelsNum=15;
-      ReducedImageSize=64;
-      IlluminationNormalize=1;
-      RegionsMat;
-      ComparisonVector;
+      DescriptorLength=12000;          % Descriptor length in bits.
+      DescriptorMode=1;                % Modes 1:Linear grawing grids,  2: Exponential grawing grids
+      LDBLevelsNum=15;                 % number of grid levels.
+      ReducedImageSize=64;             % reduces image size,  default setting 64x64 pixels.
+      IlluminationNormalize=1;         % perform patch-illumination-normalization for the images before computing the descriptor.
+      RegionsMat;                      % image-cells reagions.
+      ComparisonVector;                % selected cell-pairs numbers.
    end
    methods
       function obj=SelectRandomCellPairs (obj)  %Mode=1(linear),=2(Exp)
