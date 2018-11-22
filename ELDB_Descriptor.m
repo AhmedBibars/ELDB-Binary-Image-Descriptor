@@ -77,7 +77,7 @@ classdef ELDB_Descriptor
          RandomIndexes=RandomIndexes(1:(obj.DescriptorLength/3)); 
          obj.ComparisonVector=CompinedVector(RandomIndexes,:);
       end
-       
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
       function Descriptor = ELDB(obj,Image)
           Image=rgb2gray(Image);
           ReducedImage=imresize(Image,[obj.ReducedImageSize ,obj.ReducedImageSize]);
@@ -115,7 +115,7 @@ classdef ELDB_Descriptor
       Descriptor=[AvgOut;AbsDiffxOut;AbsDiffyOut];
          
       end
-      
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
       function LDB_Descriptor = LDB(obj,Image)
           Image=rgb2gray(Image);
           ReducedImage=imresize(Image,[obj.ReducedImageSize ,obj.ReducedImageSize]);
@@ -151,7 +151,7 @@ classdef ELDB_Descriptor
 
           LDB_Descriptor=[AvgOut;DiffxOut;DiffyOut];
       end
-      
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
       function NormalizedImage=LocalNormalize(obj,IM,FilterSize)
          % Patch illumination normalization
          Filter1=ones(FilterSize,FilterSize)/(FilterSize*FilterSize);
