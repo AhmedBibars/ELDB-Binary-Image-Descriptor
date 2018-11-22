@@ -1,3 +1,5 @@
+% This class implements the Extended Local Difference Binary (ELDB)
+% descriptor.
 classdef ELDB_Descriptor
    properties
       DescriptorLength=12000;          % Descriptor length in bits.
