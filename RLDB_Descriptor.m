@@ -1,4 +1,4 @@
-% this class implements the Random Local Difference Binary (RLDB)
+% This class implements the Random Local Difference Binary (RLDB)
 % descriptor.
 classdef RLDB_Descriptor
    properties
