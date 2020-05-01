@@ -1,5 +1,8 @@
 # ELDB-Binary-image-descriptor
-This project introduces ELDB binary image descriptor. This descriptor is used as a global image descriptor for place recognition applications. It represents an extension to the Local Difference Binary (LDB) image descriptor, that enhances its: 1) image matching accuracy, 2) robustness against appearance changes, and 3) its computational efficiency.
+This project introduces ELDB binary image descriptor, introduced in the research paper:
+Bibars, Ahmed, and Mohsen Mahroos. "New local difference binary image descriptor and algorithm for rapid and precise vehicle visual localisation." IET Computer Vision 13, no. 5 (2019): 443-451.
+
+This descriptor is used as a global image descriptor for place recognition applications. It represents an extension to the Local Difference Binary (LDB) image descriptor, that enhances its: 1) image matching accuracy, 2) robustness against appearance changes, and 3) its computational efficiency.
 
 To compute the ELDB descriptor of an image. First, the locations of the randomly selected image-cells pairs should be determined using SelectCellPairs function. Then, the image is downscaled and normalized. then finally, the descriptor is computed using ELDB1 function. As the following:
 
