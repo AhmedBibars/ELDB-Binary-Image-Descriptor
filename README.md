@@ -1,5 +1,6 @@
 # ELDB-Binary-image-descriptor
 This project introduces ELDB binary image descriptor, introduced in the research paper:
+
 Bibars, Ahmed, and Mohsen Mahroos. "New local difference binary image descriptor and algorithm for rapid and precise vehicle visual localisation." IET Computer Vision 13, no. 5 (2019): 443-451.
 
 This descriptor is used as a global image descriptor for place recognition applications. It represents an extension to the Local Difference Binary (LDB) image descriptor, that enhances its: 1) image matching accuracy, 2) robustness against appearance changes, and 3) its computational efficiency.
